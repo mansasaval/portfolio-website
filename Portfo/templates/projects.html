@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects - ReddyManasa Saval</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #d8bfd8 0%, #f8d7e3 100%);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: transparent; /* keep gradient visible */
+    }
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #6a1b9a;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .projects-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .project-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project-card h2 {
+      margin-top: 0;
+      color: #c2185b;
+    }
+    .project-card p {
+      margin: 10px 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+    .project-card strong {
+      color: #333;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: transparent; /* footer also shows gradient */
+      color: #6c757d;
+      margin-top: auto;
+    }
+    footer a {
+      color: #6a1b9a;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Projects</h1>
+    <nav>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('projects') }}">Projects</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+  </header>
+
+  <section class="projects-wrapper">
+    <div class="project-card">
+      <h2>Personal Portfolio</h2>
+      <p>A responsive website to showcase my skills and contact info.</p>
+      <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+    </div>
+
+    <div class="project-card">
+      <h2>To-Do List App</h2>
+      <p>Manage daily tasks with a simple and interactive UI.</p>
+      <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+    </div>
+
+    <div class="project-card">
+      <h2>Medical Data Augmentation</h2>
+      <p>Implemented deep generative models (GANs/VAEs) to augment imbalanced medical datasets and improve classification accuracy.</p>
+      <p><strong>Tech Stack:</strong> Python, PyTorch, TensorFlow</p>
+    </div>
+
+    <div class="project-card">
+      <h2>Politician Website</h2>
+      <p>A dynamic website built for a politician with sections like About, Vision & Mission, Gallery, News, and Contact.</p>
+      <p><strong>Tech Stack:</strong> Flask, MongoDB, HTML, CSS, JavaScript</p>
+    </div>
+
+    <div class="project-card">
+      <h2>Expense Tracker</h2>
+      <p>Web app to manage income, expenses, and savings with clean visualizations and user-friendly UI.</p>
+      <p><strong>Tech Stack:</strong> Flask, SQL, HTML, CSS, JavaScript</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 ReddyManasa Saval | 
+      <a href="mailto:savalmanasareddy@gmail.com">savalmanasareddy@gmail.com</a> |
+      <a href="https://www.linkedin.com/in/saval-manasareddy-723945295" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/mansasaval" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+</body>
+</html>
